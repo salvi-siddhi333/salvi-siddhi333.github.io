@@ -706,15 +706,15 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #contact {
-   background: #191919;
+   background: #cfb997;
    padding-top: 96px;
    padding-bottom: 102px;
    color: #636363;
 }
 #contact .section-head { margin-bottom: 42px; }
 
-#contact a, #contact a:visited  { color: #11ABB0; }
-#contact a:hover, #contact a:focus { color: #fff; }
+#contact a, #contact a:visited  { color: #0D0D0D; }
+#contact a:hover, #contact a:focus { color: #0f0f0f; }
 
 #contact h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
@@ -723,26 +723,27 @@ call-to-action .button {
    color: #EBEEEE;
    margin-bottom: 6px;
 }
-#contact h1 span { display: none; }
+#contact h1 span { display: none; color: #08172e; }
 #contact h1:before {
    font-family: 'FontAwesome';
-   content: "\f0e0";
-	padding-right: 10px;
+   content: "\f2c1";
+	padding-left: 440px;
 	font-size: 72px;
    line-height: 72px;
    text-align: left;
    float: left;
    color: #ebeeee;
+
 }
 
 #contact h4 {
    font: 16px/24px 'opensans-bold', sans-serif;
-   color: #EBEEEE;
+   color: #08172e;
    margin-bottom: 6px;
 }
 #contact p.lead {
    font: 18px/36px 'opensans-light', sans-serif;
-   padding-right: 3%;
+   padding-right: 320px;
 }
 #contact .header-col { padding-top: 6px; }
 
@@ -752,7 +753,7 @@ call-to-action .button {
 #contact label {
    font: 15px/24px 'opensans-bold', sans-serif;
    margin: 12px 0;
-   color: #EBEEEE;
+   color: #08172e;
 	display: inline-block;
 	float: left;
    width: 26%;
@@ -763,6 +764,7 @@ call-to-action .button {
    padding: 18px 20px;
 	color: #eee;
 	background: #373233;
+   opacity: 0.3;
 	margin-bottom: 42px;
 	border: 0;
 	outline: none;
@@ -774,12 +776,12 @@ call-to-action .button {
 #contact textarea:focus,
 #contact select:focus {
 	color: #fff;
-	background-color: #11ABB0;
+	background-color: #373233;
 }
 #contact button.submit {
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	color:#fff;
+	color:#ceb290;
    background: #0D0D0D;
 	border: none;
    cursor: pointer;
@@ -789,11 +791,11 @@ call-to-action .button {
    margin-left: 26%;
 }
 #contact button.submit:hover {
-	color: #0D0D0D;
-	background: #fff;
+	color: #ceb290;
+	background: #08172e;
 }
 #contact span.required {
-	color: #11ABB0;
+	color: red;
 	font-size: 13px;
 }
 #message-warning, #message-success {
@@ -920,5 +922,5 @@ footer .social-links li:first-child { margin-left: 0; }
    line-height: 60px;
  	border-radius: 100%;
 }
-#go-top a:hover { background-color: #0F9095; }
+#go-top a:hover { background-color: #08172e; }
 
