@@ -220,7 +220,7 @@ ul#nav li.current a { color: #ceb290; }
 }
 #about .main-col { padding-right: 10px; }
 #about .download .button {
-   margin-top: 160px;
+   margin-top: 120px;
    margin-left: 120px;
    background: #444;
 }
@@ -231,6 +231,15 @@ ul#nav li.current a { color: #ceb290; }
 #about .download .button i {
    margin-right: 15px;
    font-size: 20px;
+}
+
+#about a{
+   background-color: #0D0D0D;
+}
+
+#about a:hover{
+   background-color: transparent;
+   color:#08172e
 }
 
 
@@ -318,6 +327,11 @@ ul#nav li.current a { color: #ceb290; }
    text-align: center;
    margin-bottom: 48px;
    color: #95A3A3;
+}
+
+#portfolio img{
+   width: 700;
+   height: 700;
 }
 
 /* Portfolio Content */
@@ -447,8 +461,9 @@ ul#nav li.current a { color: #ceb290; }
 	text-transform: uppercase;
    letter-spacing: 3px;
    cursor: pointer;
+   margin-left: 24px;
 }
-.popup-modal a:hover {	color: #00CCCC; }
+.popup-modal a:hover {	color: #ceb290; }
 .popup-modal a.popup-modal-dismiss { margin-left: 24px; }
 
 
