@@ -221,10 +221,11 @@ ul#nav li.current a { color: #ceb290; }
 #about .main-col { padding-right: 10px; }
 #about .download .button {
    margin-top: 120px;
-   margin-left: 120px;
+   margin-left: 10px;
    background: #444;
 }
 #about .download .button:hover {
+   width: auto;
    background: #0f2d49;
    color: #ccbf90;
 }
