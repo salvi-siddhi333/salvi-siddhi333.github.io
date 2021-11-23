@@ -303,7 +303,6 @@ ul#nav li.current a { color: #ceb290; }
    filter: gray;
    -webkit-filter: grayscale(1);
    -webkit-transition: all .3s ease-in-out;
-
 }
 
 #academics img:hover{
