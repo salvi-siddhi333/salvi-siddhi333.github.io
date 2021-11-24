@@ -3,7 +3,6 @@
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
@@ -21,6 +20,7 @@
 	<link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/magnific-popup.css">
+   <!-- <link rel="stylesheet" href="css/cursor.css"> -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <!-- Script
@@ -35,6 +35,21 @@
 
 <body>
 
+   <!--Cursor
+   ================================================== -->
+   <div class="cursor">
+      <!-- <div class="cursor__ball cursor__ball--big ">
+        <svg height="30" width="30">
+          <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+        </svg>
+      </div>
+      
+      <div class="cursor__ball cursor__ball--small">
+        <svg height="10" width="10">
+          <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
+      </div> -->
+   </div> 
    <!-- Header
    ================================================== -->
    <header id="home">
@@ -45,7 +60,7 @@
 	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li class="current"><a class="smoothscroll myclass" href="#home">Home</a></li>
             <li><a class="smoothscroll" href="#about">About</a></li>
 	         <li><a class="smoothscroll" href="#academics">Academics</a></li>
             <li><a class="smoothscroll" href="#project">Projects</a></li>
@@ -358,6 +373,7 @@
    ================================================== -->
    <section id="certificates">
    </section>
+
    <!-- community Section
    ================================================== -->
    <section id="community">
@@ -582,13 +598,65 @@
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script>
+      const cursor =  document.querySelector('.cursor');
+      document.addEventListener('mousemove',e =>{
+         cursor.setAttribute('style','top: '+(e.pageY-10)+'px; left: '+(e.pageX-10)+'px; ')
+      })
 
+      document.addEventListener('a:hover', () =>{
+         cursor.classList.add('expand');
+         
+         setTimeout(() =>{
+            cursor.classList.remove('expand');
+         },1)
+      })
+
+      // $("myclass").click(() =>
+      // {
+      //    alert("cursor")
+      // })
+//       const $bigBall = document.querySelector('.cursor__ball--big');
+// const $smallBall = document.querySelector('.cursor__ball--small');
+// const $hoverables = document.querySelectorAll('.hoverable');
+
+// // Listeners
+// document.body.addEventListener('mousemove', onMouseMove);
+// for (let i = 0; i < $hoverables.length; i++) {
+//   $hoverables[i].addEventListener('mouseenter', onMouseHover);
+//   $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+// }
+
+// // Move the cursor
+// function onMouseMove(e) {
+//   TweenMax.to($bigBall, .4, {
+//     x: e.pageX - 15,
+//     y: e.pageY - 15
+//   })
+//   TweenMax.to($smallBall, .1, {
+//     x: e.pageX - 5,
+//     y: e.pageY - 7
+//   })
+// }
+
+// // Hover an element
+// function onMouseHover() {
+//   TweenMax.to($bigBall, .3, {
+//     scale: 4
+//   })
+// }
+// function onMouseHoverOut() {
+//   TweenMax.to($bigBall, .3, {
+//     scale: 1
+//   })
+// }~
+   </script>
    <script src="js/jquery.flexslider.js"></script>
    <script src="js/waypoints.js"></script>
    <script src="js/jquery.fittext.js"></script>
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
-
+   <!-- <script src="js/cursor.js"></script> -->
 </body>
 
 </html>

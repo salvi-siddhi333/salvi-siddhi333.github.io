@@ -22,8 +22,71 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; }
+body { background: #0f0f0f; 
+   z-index: 9;
+   cursor: none; 
+}
+a {
+   cursor:none;
+   /* color: pink; */
+}
+/* a:hover{
+   height: 50%;
+   width: 50%;
+} */
+/*Cursor*/
+.cursor{
+   height: 30px;
+   width: 30px;
+   border: 1px solid #36454F;
+   border-radius: 50%;
+   position: absolute;
+   transition-duration: 00ms;
+   transition-timing-function: ease-out;
+   animation: cursorAnim infinite alternate;
+   z-index: 9;
+   pointer-events: none;
+   
+} 
+.cursor::after{
+   content: "";
+   height: 5px;
+   width: 5px;
+   position: absolute;
+   border: 3px solid #36454F;
+   border-radius: 50%;
+   z-index: 9;
+   top: 11px;
+   left: 11px;
+   animation: cursorAnime2 infinite alternate;
+    
+}
+@keyframes cursorAnim{
+   from{
+      transform: scale(1);
+   }
+   to{
+      transform: scale(.7);
+   }
+}
 
+@keyframes cursorAnim2{
+   0%{
+      transform: scale(1);
+   }
+   50%{
+      transform: scale(5);
+   }
+   100%{
+      transform: scale(1);
+      opacity: .5;  }
+}
+
+
+/* .expand{
+   animation: cursorAnime2 .5s forwards;
+   border: 1px solid red;
+} */
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
@@ -32,7 +95,7 @@ header {
    position: relative;
    height: 800px;
    min-height: 500px;
-   width: 100%;   
+   width: auto;   
    background: #161415 url(../images/S.png) no-repeat top center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
@@ -51,9 +114,12 @@ header .banner {
    display: inline-block;
    vertical-align: middle;
    margin: 0 auto;
-   width: 85%;
+   width: auto;
    padding-bottom: 30px;
    text-align: center;
+   align-self: center;
+   max-width: 100%;
+   height: auto;
 }
 
 header .banner-text { width: 100%; }
@@ -135,7 +201,7 @@ header .scrolldown a:hover { color: #ccbf90; }
    text-transform: uppercase;
    letter-spacing: 2.5px;
    margin: 0 auto;
-   z-index: 100;
+   z-index: 1;
    position: fixed;
    left: 0;
    top: 0;
@@ -220,9 +286,9 @@ ul#nav li.current a { color: #ceb290; }
 }
 #about .main-col { padding-right: 10px; }
 #about .download .button {
-   margin-top: 120px;
-   margin-left: 10px;
-   background: #444;
+   margin-top: 70px;
+   margin-left: 60px;
+   background: #444; 
 }
 #about .download .button:hover {
    width: auto;
@@ -230,7 +296,7 @@ ul#nav li.current a { color: #ceb290; }
    color: #ccbf90;
 }
 #about .download .button i {
-   margin-right: 15px;
+   margin-right: 10px;
    font-size: 20px;
 }
 
